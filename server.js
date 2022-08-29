@@ -1,6 +1,18 @@
 // Require http module
+const http = require('http')
 
 // Require fs module
+const fs = require('fs');
+
+fs.readFile('./public/index.html', 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
+
+res.end(./public/index.html);
 
 // Require minimist module (make sure you install this one via npm).
 
