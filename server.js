@@ -12,8 +12,6 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
   console.log(data);
 });
 
-res.end(./public/index.html);
-
 // Require minimist module (make sure you install this one via npm).
 node app.js name=brooke
 
@@ -35,6 +33,8 @@ args.name; // brooke
 npm install minimist
 
 node app.js --name=brooke
+
+--port= process.env.PORT || 3000
 
 // Use minimist to process one argument `--port=` on the command line after `node server.js`.
 
@@ -60,7 +60,14 @@ node app.js --name=brooke
 // 2. set a header with content type `text/html`, and 
 // 3. end with the data that you are reading in from ./public/index.html.
 
+const hostname = '127.0.0.1'
+const port = 3000
 
+const server = http.createServer((req, res) => {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'text/html')
+  res.end('./public/index.html')
+})
 
 
 
