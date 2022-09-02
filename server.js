@@ -16,7 +16,7 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 });
 
 // Require minimist module (make sure you install this one via npm).
-node app.js name=brooke
+node app.js port=brooke
 
 process.argv.forEach((val, index) => {
   console.log(`${index}: ${val}`);
