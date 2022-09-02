@@ -29,9 +29,9 @@ node app.js brooke
 const args = process.argv.slice(2);
 args[0];
 
-node app.js name=brooke
+node app.js port=brooke
 
-args.name;
+args.port;
 
 npm install minimist
 
