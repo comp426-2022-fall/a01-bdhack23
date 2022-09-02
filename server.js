@@ -4,8 +4,7 @@ const http = require('http')
 // Require fs module
 const fs = require('fs');
 
-var argv = require('minimist')(process.argv.slice(2));
-console.log(argv);
+const args = require('minimist')(process.argv.slice(2));
 
 fs.readFile('./public/index.html', 'utf8', (err, data) => {
   if (err) {
@@ -61,7 +60,9 @@ const server = http.createServer((req, res) => {
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
 
-
+server.listen(brooke, () => {
+  console.log('Server listenting on poert ${port}')
+});
 
 
 // That's it! You're all done!
