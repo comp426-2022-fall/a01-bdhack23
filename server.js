@@ -4,6 +4,9 @@ const http = require('http')
 // Require fs module
 const fs = require('fs');
 
+var argv = require('minimist')(process.argv.slice(2));
+console.log(argv);
+
 fs.readFile('./public/index.html', 'utf8', (err, data) => {
   if (err) {
     console.error(err);
@@ -13,9 +16,7 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 });
 
 // Require minimist module (make sure you install this one via npm).
-const args = require('minimist')(process.argv.slice(2));
-
-npm install minimist
+npm i minimist
 
 node app.js --name=brooke
 
