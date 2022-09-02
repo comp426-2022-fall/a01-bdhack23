@@ -16,7 +16,24 @@ fs.readFile('./public/index.html', 'utf8', (err, data) => {
 });
 
 // Require minimist module (make sure you install this one via npm).
-npm i minimist
+node app.js name=brooke
+
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+});
+
+const args = process.argv.slice(2);
+
+node app.js brooke
+
+const args = process.argv.slice(2);
+args[0];
+
+node app.js name=brooke
+
+args.name;
+
+npm install minimist
 
 node app.js --name=brooke
 
