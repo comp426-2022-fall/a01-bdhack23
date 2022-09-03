@@ -53,6 +53,5 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
   console.log('Server listenting on poert ${port}')
 });
-});
 
 // That's it! You're all done!
